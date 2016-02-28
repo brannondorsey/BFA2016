@@ -1,0 +1,3 @@
+[submodule "holypager"]
+	path = holypager
+	url = https://github.com/brannondorsey/holypager.git
