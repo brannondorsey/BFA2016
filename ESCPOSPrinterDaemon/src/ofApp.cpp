@@ -25,6 +25,8 @@
 
 #include "ofApp.h"
 
+string reorganize(string message);
+
 void ofApp::setup()
 {
     //create the socket and bind to port 11999
@@ -46,7 +48,8 @@ void ofApp::setup()
     ofx::IO::SerialDeviceInfo::DeviceList devices = ofx::IO::SerialDeviceUtils::listDevices();
     for (int i = 0; i < devices.size(); i++) {
         cout << devices[i].getPort() << endl;
-        if (ofIsStringInString(devices[i].getPort(), "/dev/cu.Repleo-")) {
+        // OSX: /dev/cu.Repleo-
+        if (ofIsStringInString(devices[i].getPort(), "/dev/ttyUSB0")) {
             port = devices[i].getPort();
             break;
         }
@@ -114,7 +117,7 @@ void ofApp::update() {
         } else if (message == "[printer invert false]") {
             printer.setInvert(false);
         } else {
-            printer.println(message);
+            printer.println(reorganize(message));
         }
     }
 }
