@@ -36,12 +36,6 @@ void ofApp::setup()
     
     std::string port = "";
     
-//    if (getenv("ESCPOSPORT") != NULL) {
-//        port = getenv("ESCPOSPORT");
-//    } else {
-//        port = "/dev/tty.Repleo-PL2303-00001014";
-//    }
-    
     // We can get all of the connected serial devices using the
     // IO::SerialDeviceUtils::getDevices() method.
     // See documentation for more information.
@@ -79,31 +73,7 @@ void ofApp::setup()
 
     // Initialize the printer.
     printer.initialize();
-    
     printer.setUpsideDown(true);
-    
-    times.push_back("12:21 AM");
-    messages.push_back("NEW JOB: BED: PEDS Room 0295 Bed 01 BED ID: 29501 STATUS: Dirty");
-    
-    times.push_back("12:22 AM");
-    messages.push_back("CHANDRA EVELYN/INGALLS pt:FALYN TAMAYO 9/7/84 708-915-5290 DR TO DR KHALID");
-    
-    times.push_back("12:23 AM");
-    messages.push_back("RQSTD: MCDONALD, EMERICK 59 Medical #: 000145104 Visit #: 217023753 M Origin Unit: ED Admitting: VYAS-MD, AMIT D TRI Level of Care: Admit to Inpatient Services Diagnosis: AMS, prob alcohol withdrawl, poss sepsis, head contusion");
-    
-    times.push_back("12:24 AM");
-    messages.push_back("773-296-0071 FROM: KATE-RN AIMMC 531/541 - ONCOL 531- PLEASE D/C CONTINUOUS PULSE OX ORDER, CANNOT HAVE ON THIS FLOOR");
-    
-    times.push_back("12:25 AM");
-    messages.push_back("From:FaxAndPage@extendedcare.com<LF>Msg:Allscripts Alert: Referral Received response from Providence Heal<LF>thcare and Rehabilitation Center - Downers Grove re: Referral 324<LF>38948 for patient in PC424210-01: Referral Received");
-    
-    times.push_back("12:26 AM");
-    messages.push_back("CODE YELLOW TRAUMA TEAM TO THE EMERGENCY ROOM");
-    
-    times.push_back("12:27 AM");
-    messages.push_back("CODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOMCODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOMCODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOMCODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOMCODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOMCODEYELLOWTRAUMATEAMTOTHEEMERGENCYROOM");
-
-    messageIndex = 0;
 }
 
 void ofApp::update() {

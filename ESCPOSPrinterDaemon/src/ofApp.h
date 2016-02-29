@@ -38,9 +38,4 @@ public:
 
     ofx::ESCPOS::DefaultSerialPrinter printer;
     ofxUDPManager udpConnection;
-
-    int messageIndex;
-    std::vector<std::string> times;
-    std::vector<std::string> messages;
-
 };
