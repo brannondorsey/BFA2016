@@ -17,4 +17,4 @@ echo "Launching ESCPOSPrinterDaemon."
 
 # POCSAG pager text recording
 echo "Launching holypager reading from file \"$POCSAG_RECORDING_CSV\"."
-"$DIR_NAME/holypager/holypager" "--read=$POCSAG_RECORDING_CSV" --broadcast-freq=163.25e6 --bfa --anonymize --thermal --verbose | tee "$DIR_NAME/log/holypager.log"
+"$DIR_NAME/holypager/holypager" "--read=$POCSAG_RECORDING_CSV" --broadcast-freq=163.25e6 --bfa --anonymize --thermal --verbose
